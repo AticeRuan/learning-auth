@@ -1,0 +1,52 @@
+GET http://localhost:3000/
+
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "password":"password"
+}
+
+###
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTcxMzM0NTQ1MSwiZXhwIjoxNzEzMzQ1NDY2fQ.LBHtoevn95fKjHf8NlMTZ3oi2zMKQyt_AqBbcryvf3M
+
+###
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTcxMzM0NTQyNX0.j-UfNxKgDz3yMCAors9ZZfjXkBp7bAYtxiW2okmTKNI"
+}
+
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username":"Kyle",
+    "password":"password"
+}
+
+
+###
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTcxMzM0NTMzMCwiZXhwIjoxNzEzMzQ1MzQ1fQ.MWG6PKbNEr7COfTtfcdaKsCiqFtnsegS3bZfl6wdIKg"
+}
+
+###
+
+POST http://localhost:4000/create-user
+Content-Type: application/json
+
+{
+    "username":"Kyle",
+    "password":"password"
+}
